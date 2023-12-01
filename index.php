@@ -7,7 +7,7 @@ $dbname = '';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-//check if short url already exist
+//check if short url already exgit ist
 function checkShortUrl($url){
     global $conn;
     $response = [];
@@ -15,10 +15,10 @@ function checkShortUrl($url){
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0){
         $response['status']= 2012;
-        $response['message'] = 'Url already exist';
+        $response['message'] = 'Url already Exist';
     }else{
         $response['status'] = 1001;
-        $response['message'] = 'Url does not exist';
+        $response['message'] = 'Url does not Exist';
     }
     return $response;
 }
